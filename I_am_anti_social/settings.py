@@ -59,7 +59,8 @@ INSTALLED_APPS = [
     'magazines',
     'my_blog',
     'disqus',
-    'debug_toolbar'
+    'debug_toolbar',
+    'threads',
 ]
 
 INTERNAL_IPS = ('127.0.0.1',)
