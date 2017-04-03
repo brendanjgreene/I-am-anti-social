@@ -61,6 +61,7 @@ INSTALLED_APPS = [
     'disqus',
     'debug_toolbar',
     'threads',
+    'emoticons',
 ]
 
 INTERNAL_IPS = ('127.0.0.1',)
