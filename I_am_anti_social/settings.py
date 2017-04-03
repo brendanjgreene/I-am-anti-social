@@ -59,8 +59,10 @@ INSTALLED_APPS = [
     'magazines',
     'my_blog',
     'disqus',
+    'debug_toolbar'
 ]
 
+INTERNAL_IPS = ('127.0.0.1',)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -71,6 +73,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'I_am_anti_social.urls'
@@ -143,10 +146,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = ''
 
 STATICFILES_DIRS = (
-   os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "static"),  # static directory at the project level
 )
+
+# tinymce settings
+TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", 'js', 'tinymce', 'tinymce.min.js')
 
 
 AUTH_USER_MODEL = 'accounts.User'
