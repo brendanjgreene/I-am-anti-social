@@ -65,6 +65,8 @@ INSTALLED_APPS = [
 ]
 
 INTERNAL_IPS = ('127.0.0.1',)
+
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -166,9 +168,7 @@ AUTHENTICATION_BACKENDS = (
     'accounts.backends.EmailAuth',
 )
 
-
 DISQUS_WEBSITE_SHORTNAME = 'bootcampblog'
-SITE_ID = 1
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'

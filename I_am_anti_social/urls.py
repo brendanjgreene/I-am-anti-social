@@ -24,7 +24,6 @@ from magazines import views as magazine_views
 from django.views.static import serve
 from .settings import MEDIA_ROOT
 from django.conf import settings
-from django.conf.urls import include, url
 from threads import views as forum_views
 
 urlpatterns = [
