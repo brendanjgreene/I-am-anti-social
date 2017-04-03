@@ -21,7 +21,8 @@ from paypal.standard.ipn import urls as paypal_urls
 from paypal_store import views as paypal_views
 from products import views as product_views
 from magazines import views as magazine_views
-
+from django.views.static import serve
+from .settings import MEDIA_ROOT
 
 
 urlpatterns = [
@@ -39,4 +40,6 @@ urlpatterns = [
     url(r'^paypal-cancel', paypal_views.paypal_cancel),
     url(r'^products/$', product_views.all_products),
     url(r'^magazines/$', magazine_views.all_magazines),
+    url(r'^blog/', include('my_blog.urls')),
+    url(r'^media/(?P<path>.*)$', serve, {'document_root': MEDIA_ROOT}),
 ]

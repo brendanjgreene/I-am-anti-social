@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'paypal_store',
     'products',
     'magazines',
+    'my_blog',
+    'disqus',
 ]
 
 MIDDLEWARE = [
@@ -155,3 +157,9 @@ AUTHENTICATION_BACKENDS = (
     'accounts.backends.EmailAuth',
 )
 
+
+DISQUS_WEBSITE_SHORTNAME = 'bootcampblog'
+SITE_ID = 1
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
