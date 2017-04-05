@@ -13,6 +13,6 @@ class Magazine(models.Model):
 
 
 class Purchase(models.Model):
-        user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='purchases')
-        magazine = models.ForeignKey(Magazine)
-        subscription_end = models.DateTimeField(default=timezone.now)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name='purchases')
+    magazine = models.ForeignKey(Magazine)
+    subscription_end = models.DateTimeField(default=timezone.now)
