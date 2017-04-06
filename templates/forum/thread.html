@@ -61,5 +61,10 @@
             {% endif %}
         </div>
     </div>
+    <div class="container">
+        {% for post in thread.posts.all %}
+            {% include "forum/post.html" %}
+        {% endfor %}
+    </div>
 
 {% endblock %}
