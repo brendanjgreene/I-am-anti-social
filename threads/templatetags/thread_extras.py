@@ -41,7 +41,7 @@ def user_vote_button(thread, subject, user):
                 'subject_id': subject.id
             })
 
-            return link
+        return link
     return ""
 
 
@@ -52,4 +52,3 @@ def vote_percentage(subject):
         return 0
     total_votes = subject.poll.votes.count()
     return (100 / total_votes) * count
-
