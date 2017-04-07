@@ -1,5 +1,6 @@
 import arrow
 from django import template
+from django.template import Template
 from django.core.urlresolvers import reverse
 
 register = template.Library()
@@ -40,9 +41,8 @@ def user_vote_button(thread, subject, user):
                 'thread_id': thread.id,
                 'subject_id': subject.id
             })
-
-        return link
-    return ""
+            return link
+        return ""
 
 
 @register.filter

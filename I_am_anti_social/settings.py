@@ -61,12 +61,12 @@ INSTALLED_APPS = [
     'disqus',
     'debug_toolbar',
     'threads',
+    'tinymce',
     'emoticons',
     'polls',
 ]
 
 INTERNAL_IPS = ('127.0.0.1',)
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
