@@ -34,13 +34,6 @@
                    <li><a href="/forum/">Forum</a></li>
                </ul>
            </li>
-           {% if user.is_authenticated %}
-               <li><a href="{% url 'profile' %}">Profile</a></li>
-               <li><a href="{% url 'logout' %}">Log Out</a></li>
-           {% else %}
-               <li><a href="{% url 'register' %}">Register</a></li>
-               <li><a href="{% url 'login' %}">Log In</a></li>
-           {% endif %}
            <li class="dropdown">
                <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Info!<span class="caret"></span></a>
                <ul class="dropdown-menu">
@@ -48,8 +41,15 @@
                    <li><a href="/pages/contact/">Contact</a></li>
                </ul>
            </li>
+           {% if user.is_authenticated %}
+               <li><a href="{% url 'profile' %}">Profile</a></li>
+               <li><a href="{% url 'logout' %}">Log Out</a></li>
+           {% else %}
+               <li><a href="{% url 'register' %}">Register</a></li>
+               <li><a href="{% url 'login' %}">Log In</a></li>
+           {% endif %}
        </ul>
-       <h1><a href="/"><span class="fui-settings-16 muted">My Tongue in Cheek Site</span></a></h1>
+       <h1><a href="/"><span class="fui-settings-16 muted">My Anti-Social Site</span></a></h1>
    </div>
    <hr>
     {% if messages %}
@@ -68,7 +68,7 @@
    </div>
    <hr>
    <div class="footer">
-       <p>Made By Bootcampers and Django </p>
+       <p>Made By Me! with reluctant thanks to Code Institute and Django </p>
    </div>
 </div>
 </body>
