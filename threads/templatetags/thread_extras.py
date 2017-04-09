@@ -1,7 +1,7 @@
 import arrow
 from django import template
-from django.template import Template
 from django.core.urlresolvers import reverse
+from django.utils.safestring import mark_safe
 
 register = template.Library()
 
@@ -22,7 +22,17 @@ def started_time(created_at):
 @register.simple_tag
 def last_posted_user_name(thread):
     posts = thread.posts.all().order_by('-created_at')
-    return posts[posts.count() - 1].user.username
+    if posts.count > 1:
+        return posts[posts.count() - 1].user.username
+    else:
+        return ""
+
+"""
+@register.simple_tag
+def last_posted_user_name(thread):
+    posts = thread.posts.all().order_by('created_at')
+    return posts.first().user.username
+"""
 
 
 @register.simple_tag
@@ -32,7 +42,7 @@ def user_vote_button(thread, subject, user):
     if not vote:
         if user.is_authenticated():
             link = """
-                <div class="col-md-3 btn-vote">
+                <div class="col-md-2 btn-vote">
                     <a href="%s" class="btn btn-default btn-sm">
                         Add my vote!
                     </a>
@@ -41,8 +51,8 @@ def user_vote_button(thread, subject, user):
                 'thread_id': thread.id,
                 'subject_id': subject.id
             })
-            return link
-        return ""
+            return mark_safe(link)
+    return ""
 
 
 @register.filter
