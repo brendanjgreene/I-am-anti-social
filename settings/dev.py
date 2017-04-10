@@ -16,9 +16,12 @@ STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', '<your STRIPE_PUBLISHABLE k
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', '<your STRIPE_SECRET key>')
 
 # Paypal environment variables
+# SITE_URL = 'http://127.0.0.1:8000'
+# PAYPAL_NOTIFY_URL = '<your ngrok URL>'
+# PAYPAL_RECEIVER_EMAIL = '<your Paypal merchant email>'
 SITE_URL = 'http://127.0.0.1:8000'
-PAYPAL_NOTIFY_URL = '<your ngrok URL>'
-PAYPAL_RECEIVER_EMAIL = '<your Paypal merchant email>'
+PAYPAL_NOTIFY_URL = 'http://127.0.0.1/a-very-hard-to-guess-url/'
+PAYPAL_RECEIVER_EMAIL = 'brendanjgreene-merchant2@gmail.com'
 
 # Stripe environment variables
 # STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_DN78rrac6Vda1ito3iAlshPc')

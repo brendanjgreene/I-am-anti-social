@@ -29,6 +29,7 @@ from threads import views as forum_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', hello_views.get_index, name='index'),
+    url(r'^contact-form/$', hello_views.contact, name='contact-form'),
 
     # AUTH
     url(r'^register/$', accounts_views.register, name='register'),

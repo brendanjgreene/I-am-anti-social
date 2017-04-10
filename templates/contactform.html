@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load staticfiles %}
+
+{% block title %}Contact - {{ block.super }}{% endblock %}
+
+{% block content %}
+<h1>Contact</h1>
+<form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form | as_bootstrap }}
+    <button class="btn btn-large btn-success" type="submit">Submit</button>
+</form>
+{% endblock %}

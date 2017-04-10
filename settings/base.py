@@ -4,7 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: Enter your own SECRET_KEY here
-SECRET_KEY = '<SECRET_KEY>'
+SECRET_KEY = 'me^852=136qh0)wd4u$bjq+j3yq$!un=v8=8dz+aq47wqs53p('
 
 ALLOWED_HOSTS = []
 SITE_ID = 2
@@ -104,3 +104,14 @@ STATICFILES_DIRS = (
 
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", "js",
                                "tinymce", "tinymce.min.js")
+
+
+# this outputs email to our local terminal console for testing for a live website
+# You can do this by setting up something like Sendgrid "https://sendgrid.com/" or Mandrill "http://mandrill.com/"
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'testing@example.com'
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_USE_TLS = False
+EMAIL_PORT = 1025
+

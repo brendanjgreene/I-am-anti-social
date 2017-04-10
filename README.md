@@ -3,7 +3,7 @@
 You now have all the tools at your disposal to create a world class full stack membership site. Throughout Stream 3, we have been creating and assembling the key components of a site we have been calling We Are Social. The reason for this is that we would like to create a Social Entrepreneurship site that allows for the exchange of ideas that benefit both businesses and society as a whole.
 
 
-KEY COMPONENTS
+## KEY COMPONENTS
 
 The user stories (and components) involved in interacting with the site are as follows:
 
@@ -14,7 +14,7 @@ The user stories (and components) involved in interacting with the site are as f
 * Members can vote on whether a project will go ahead or not based on member voting using a Polls App
 
 
-USER EXPERIENCE
+## USER EXPERIENCE
 
 You have these key components already in place. Now use the skills you have learned across the three Streams to create a fantastic user experience for members and non-members alike.
 
