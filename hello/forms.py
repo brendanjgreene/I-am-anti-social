@@ -8,3 +8,5 @@ class ContactForm(forms.Form):
         required=True,
         widget=forms.Textarea
     )
+
+# https://hellowebapp.com/news/tutorial-setting-up-a-contact-form-with-django/
