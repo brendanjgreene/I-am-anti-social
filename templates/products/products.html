@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load readmore %}
 {% block content %}
     <table class="table table-striped">
         <thead>
@@ -13,7 +14,7 @@
             {% for product in products %}
                 <tr>
                     <td>{{ product.name }}</td>
-                    <td>{{ product.description }}</td>
+                    <td>{{ product.description|readmore:15 }}</td>
                     <td>${{ product.price }}</td>
                     <td>{{ product.paypal_form.sandbox }}</td>
                 </tr>

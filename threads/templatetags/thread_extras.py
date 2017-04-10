@@ -22,7 +22,7 @@ def started_time(created_at):
 @register.simple_tag
 def last_posted_user_name(thread):
     posts = thread.posts.all().order_by('-created_at')
-    if posts.count > 1:
+    if posts.count >= 2:
         return posts[posts.count() - 1].user.username
     else:
         return ""
@@ -42,7 +42,7 @@ def user_vote_button(thread, subject, user):
     if not vote:
         if user.is_authenticated():
             link = """
-                <div class="col-md-2 btn-vote">
+                <div class="pull-right col-md-3 btn-vote">
                     <a href="%s" class="btn btn-default btn-sm">
                         Add my vote!
                     </a>

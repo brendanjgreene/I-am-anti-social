@@ -21,7 +21,9 @@
                                 </time>
                             </td>
                             <td>{{ thread.user.username }}</td>
-                            <td>{% last_posted_user_name thread %}</td>
+                            {% if last_posted_user_name > 0 %}
+                                <td>{% last_posted_user_name thread %}</td>
+                            {% endif %}
                         </tr>
                     </tbody>
                 </table>
@@ -55,10 +57,10 @@
             {% endif %}
 
             {% if user.is_authenticated %}
-                <p>
-                    <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
-                </p>
+                <p><a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
             {% endif %}
+                <p><a href="{% url 'threads' thread.subject_id %}" class="btn btn-primary">Back to Thread</a>
+
         </div>
     </div>
     <div class="container">
