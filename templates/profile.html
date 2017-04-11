@@ -7,19 +7,25 @@
     <p>Your stripe id is {{ user.stripe_id }} </p>
     {% endif %}
     <h2>Subscription Details</h2>
-    <p>You have {{ user.subscription_end|timeuntil}} left on your subscription</p>
-    <p>To cancel your subscription click 'Cancel Subscription' below</p>
-    <p>
-        <a href="{% url "cancel_subscription" %}"
-           onclick="return cancelSubscriptionCheck();"
-           class="btn btn-danger">Cancel Subscription</a>
-    </p>
-    <script type="text/javascript">
-        function cancelSubscriptionCheck() {
-            if (confirm('Are you sure you want to cancel?')) {
-                return true;
+    {% if user.is_staff %}
+        <p>As a Staff Member you have unlimited access</p>
+    {% endif %}
+    {% if not user.is_staff %}
+        <p>You have {{ user.subscription_end|timeuntil}} left on your subscription</p>
+        <p>To cancel your subscription click 'Cancel Subscription' below</p>
+        <p>
+            <a href="{% url "cancel_subscription" %}"
+               onclick="return cancelSubscriptionCheck();"
+               class="btn btn-danger">Cancel Subscription</a>
+        </p>
+        <script type="text/javascript">
+            function cancelSubscriptionCheck() {
+                if (confirm('Are you sure you want to cancel?')) {
+                    return true;
+                }
+                return false;
             }
-            return false;
-        }
-    </script>
+        </script>
+    {% endif %}
+
 {% endblock %}

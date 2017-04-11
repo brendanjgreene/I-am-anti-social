@@ -55,11 +55,12 @@
                     </div>
                 </div>
             {% endif %}
-
+            <p>
             {% if user.is_authenticated %}
-                <p><a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
+                <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
             {% endif %}
-                <p><a href="{% url 'threads' thread.subject_id %}" class="btn btn-primary">Back to Thread</a>
+            <a href="{% url 'threads' thread.subject_id %}" class="btn btn-warning pull-right">Back to Thread</a>
+            </p>
 
         </div>
     </div>
