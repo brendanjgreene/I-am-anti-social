@@ -21,16 +21,14 @@
                                 </time>
                             </td>
                             <td>{{ thread.user.username }}</td>
-                            {% if last_posted_user_name > 0 %}
-                                <td>{% last_posted_user_name thread %}</td>
-                            {% endif %}
+                            <td>{% last_posted_user_name thread %}</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             {% if thread.poll %}
                 <div class="container">
-                    <div class="col-md-6">
+                    <div class="col-md-9">
                         <h2>Poll</h2>
                         <strong>{{ thread.poll.question }}</strong>
 
@@ -55,19 +53,15 @@
                     </div>
                 </div>
             {% endif %}
-            <p>
+            <p class="col-sm-9">
             {% if user.is_authenticated %}
                 <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
             {% endif %}
             <a href="{% url 'threads' thread.subject_id %}" class="btn btn-warning pull-right">Back to Thread</a>
             </p>
-
+            {% for post in thread.posts.all %}
+                {% include "forum/post.html" %}
+            {% endfor %}
         </div>
     </div>
-    <div class="container">
-        {% for post in thread.posts.all %}
-            {% include "forum/post.html" %}
-        {% endfor %}
-    </div>
-
 {% endblock %}
