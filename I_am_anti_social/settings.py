@@ -26,6 +26,7 @@ SECRET_KEY = 'me^852=136qh0)wd4u$bjq+j3yq$!un=v8=8dz+aq47wqs53p('
 DEBUG = True
 
 ALLOWED_HOSTS = []
+SITE_ID = 2
 
 # PayPal Settings
 SITE_URL = 'http://127.0.0.1:8000'
@@ -37,7 +38,7 @@ PAYPAL_RECEIVER_EMAIL = 'brendanjgreene-merchant2@gmail.com'
 STRIPE_PUBLISHABLE = os.getenv('STRIPE_PUBLISHABLE', 'pk_test_DN78rrac6Vda1ito3iAlshPc')
 STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_6VOZz0QegToWvMWYrcGF5qFs')
 
-SITE_ID = 2
+
 
 # Application definition
 
