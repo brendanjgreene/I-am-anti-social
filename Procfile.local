@@ -1,1 +1,1 @@
-web: gunicorn I_am_anti_social.wsgi:application
+web: python manage.py runserver
