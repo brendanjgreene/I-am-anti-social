@@ -6,7 +6,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: Enter your own SECRET_KEY here
 SECRET_KEY = 'me^852=136qh0)wd4u$bjq+j3yq$!un=v8=8dz+aq47wqs53p('
 
-ALLOWED_HOSTS = ['http://0a73dc57.ngrok.io', 'localhost', ]
+ALLOWED_HOSTS = ['http://0a73dc57.ngrok.io', 'localhost', '127.0.0.1']
 SITE_ID = 2
 INTERNAL_IPS = ('127.0.0.1',)
 
