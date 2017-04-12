@@ -38,6 +38,9 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = 'accounts.User'
 AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',
                            'accounts.backends.EmailAuth',)
+
+DISQUS_WEBSITE_SHORTNAME = 'bootcampblog
+
 LOGIN_URL = '/login/'
 
 MIDDLEWARE_CLASSES = [
