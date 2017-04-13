@@ -9,7 +9,6 @@
          {% if user.is_authenticated %}
              <a href="{% url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
          {% endif %}
-         <a href="/forum" class="btn btn-warning pull-right">Back to Forums</a>
      </p>
    {% for thread in subject.threads.all %}
      {% include "forum/thread_item.html" %}

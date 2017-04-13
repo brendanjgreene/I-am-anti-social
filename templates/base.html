@@ -64,6 +64,7 @@
     {% endif %}
 
    <div class="container">
+       <p><button class="btn btn-warning" onclick="goBack()">Go Back</button></p>
        {% block content %}
        {% endblock %}
    </div>
@@ -82,5 +83,9 @@
    </div>
 </div>
 </body>
-
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
 </html>

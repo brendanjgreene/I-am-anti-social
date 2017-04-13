@@ -60,7 +60,6 @@
             {% if user.is_authenticated %}
                 <a href="{% url 'new_post' thread.id %}" class="btn btn-primary">New post</a>
             {% endif %}
-            <a href="{% url 'threads' thread.subject_id %}" class="btn btn-warning pull-right">Back to Thread</a>
             </p>
             {% for post in thread.posts.all %}
                 {% include "forum/post.html" %}
