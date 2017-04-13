@@ -19,7 +19,7 @@
                     {% if user.is_authenticated %}
                         <td>{% paypal_form_for magazine user %}</td>
                     {% else %}
-                        <td><a href="{% url 'login' %}">You must Log In to subscribe</a></td>
+                        <td><a href="{% url 'login' %}" class="btn btn-warning>You must Log In to subscribe</a></td>
                     {% endif %}
                 </tr>
             {% endfor %}
