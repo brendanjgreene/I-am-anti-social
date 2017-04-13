@@ -106,6 +106,8 @@ STATICFILES_DIRS = (
 TINYMCE_JS_ROOT = os.path.join(BASE_DIR, "static", "js",
                                "tinymce", "tinymce.min.js")
 
+DISQUS_WEBSITE_SHORTNAME = 'bootcampblog'
+
 
 # this outputs email to our local terminal console for testing for a live website
 # You can do this by setting up something like Sendgrid "https://sendgrid.com/" or Mandrill "http://mandrill.com/"
