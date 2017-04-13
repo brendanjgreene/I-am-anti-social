@@ -3,7 +3,7 @@ from models import Poll, PollSubject
 
 
 class PollForm(forms.ModelForm):
-    question = forms.CharField(label="What is your poll about?")
+    question = forms.CharField(label="What is your poll about?", required=False)
 
     class Meta:
         model = Poll
