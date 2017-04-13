@@ -3,7 +3,7 @@
 {% block content %}
    {% load bootstrap_tags %}
    {% for subject in subjects %}
-       <section class="subject">
+       <section class="subject jumbotron">
            <h2><a href="{% url "threads" subject.id %}">{{ subject.name }}</a></h2>
            <p>
                <a href="{% url "threads" subject.id %}">
@@ -13,7 +13,7 @@
            <table>
                <tr>
                    <th>THREADS</th>
-                   <th> POSTS</th>
+                   <th>POSTS</th>
                </tr>
                <tr>
                    <td>{{ subject.threads.count }}</td>
