@@ -22,10 +22,11 @@ def started_time(created_at):
 @register.simple_tag
 def last_posted_user_name(thread):
     posts = thread.posts.all().order_by('-created_at')
-    if posts.count >= 2:
+    if posts.count > 1:
         return posts[posts.count() - 1].user.username
     else:
         return ""
+
 
 """
 @register.simple_tag

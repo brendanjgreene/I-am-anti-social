@@ -11,7 +11,7 @@ class PollForm(forms.ModelForm):
 
 
 class PollSubjectForm(forms.ModelForm):
-    name = forms.CharField(label="Poll subject name", required=False)
+    name = forms.CharField(label="Poll subject name", required=True)
 
     def __init__(self, *args, **kwargs):
         super(PollSubjectForm, self).__init__(*args, **kwargs)
