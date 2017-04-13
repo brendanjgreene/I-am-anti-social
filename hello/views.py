@@ -4,6 +4,7 @@ from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.template import Context
 from django.template.loader import get_template
+from django.contrib import messages
 
 
 def get_index(request):
@@ -39,10 +40,11 @@ def contact(request):
                 headers={'Reply-To': contact_email }
             )
             email.send()
+            messages.success(request, "Your Contact information has been submitted! "
+                                  " Expect to hear from us within three working days!")
             return redirect('/pages/contact/')
 
-        messages.success(request, "Your Contact information has been submitted! "
-                                  " Expect to hear from us within three working days!")
+
 
     return render(request, 'contactform.html', {
         'form': form_class,
