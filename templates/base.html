@@ -40,6 +40,9 @@
                <ul class="dropdown-menu">
                    <li><a href="/pages/about/">About</a></li>
                    <li><a href="/pages/contact/">Contact</a></li>
+                   {% if user.is_superuser %}
+                       <li><a href="/admin/">Admin</a></li>
+                   {% endif %}
                </ul>
            </li>
            {% if user.is_authenticated %}
