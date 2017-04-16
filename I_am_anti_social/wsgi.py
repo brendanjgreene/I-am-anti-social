@@ -16,4 +16,3 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "I_am_anti_social.settings")
 
 application = get_wsgi_application()
 application = DjangoWhiteNoise(application)
-
