@@ -10,7 +10,7 @@ DATABASES = {
     }
 }
 
-DATABASES['default'] = dj_database_url.config(
+DATABASES['default'] = dj_database_url.parse(
     "mysql://b303b6a76a6c1a:a0cce2e7@eu-cdbr-west-01.cleardb.com/heroku_42692666c95cfac?reconnect=true")
 
 # Stripe environment variables
