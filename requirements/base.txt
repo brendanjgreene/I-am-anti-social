@@ -19,4 +19,4 @@ django-disqus==0.5
 djangorestframework==3.3
 gunicorn==19.4
 whitenoise==3.3.0
-git+git://github.com/brendanjgreene/my_blog_reusable.git
+git+https://github.com/brendanjgreene/my_blog_reusable.git
