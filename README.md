@@ -27,6 +27,6 @@ This can include:
 
 Use the knowledge learned from the Deployment lesson to deploy your project and show it off to the world!
 
-# Deployed with sarcasm:
+# Deployed with sarcasm at:
 
-at https://i-am-anti-social.herokuapp.com
+https://i-am-anti-social.herokuapp.com
