@@ -18,5 +18,5 @@ beautifulsoup4==4.5.3
 django-disqus==0.5
 djangorestframework==3.3
 gunicorn==19.4
--e git+https://github.com/brendanjgreene/my_blog_reusable.git
+-e git+https://github.com/brendanjgreene/my_blog_reusable.git#egg=django
 whitenoise==3.3.0
