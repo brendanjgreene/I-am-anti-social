@@ -35,6 +35,6 @@ to update json run on command line:
 
 - python manage.py dumpdata --natural-foreign -e contenttypes -e auth.Permission --indent=4 > db.json --settings=settings.dev
 
-the update mySql with command line:
+then update mySql with command line:
 
 - heroku run python manage.py loaddata db.json --app i-am-anti-social
