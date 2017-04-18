@@ -11,6 +11,10 @@ def get_index(request):
     return render(request, 'index.html')
 
 
+def get_info(request):
+    return render(request, 'info.html')
+
+
 def contact(request):
     form_class = ContactForm
 
@@ -40,11 +44,9 @@ def contact(request):
                 headers={'Reply-To': contact_email }
             )
             email.send()
-            messages.success(request, "Your Contact information has been submitted! "
-                                  " Expect to hear from us within three working days!")
+            messages.success(request, "Your Contact information has been submitted!"
+                                      " Expect to hear from us within three working days!")
             return redirect('/pages/contact/')
-
-
 
     return render(request, 'contactform.html', {
         'form': form_class,

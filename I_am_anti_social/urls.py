@@ -31,6 +31,7 @@ from threads import api_views as thread_api_views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', hello_views.get_index, name='index'),
+    url(r'^info/', hello_views.get_info, name='info'),
     url(r'^contact-form/$', hello_views.contact, name='contact-form'),
 
     # AUTH
