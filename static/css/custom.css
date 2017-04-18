@@ -1,9 +1,9 @@
 #my-background-image {
     background-image: url("../images/6-23-Spirit.jpg");
-    background-size: 100% auto;
+    background-size: 100%;
     background-repeat: no-repeat;
     width: 100%;
-    height: 427px
+    height: 600px;
 }
 .list-inline .fa {
     color: #222222;
@@ -13,10 +13,10 @@
     height: 450px;
     width: 100%;
 }
-.navbar-header h1 a {
+.navbar-header h2 a {
     color: #c87f0a;
 }
 
-.navbar-header h1 a:hover {
+.navbar-header h2 a:hover {
     color: inherit;
 }
