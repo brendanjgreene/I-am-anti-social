@@ -1,12 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-    <h2>Success!</h2>
+    <h2 class="text-info">Success!</h2>
     <p>You are logged in as {{ user.email }} </p>
     <p>Your last login was {{ user.last_login }}</p>
     {% if user.stripe_id %}
     <p>Your stripe id is {{ user.stripe_id }} </p>
     {% endif %}
-    <h2>Subscription Details</h2>
+    <h2 class="text-info">Subscription Details</h2>
     {% if user.is_staff %}
         <p>As a Staff Member you have unlimited access</p>
     {% endif %}
