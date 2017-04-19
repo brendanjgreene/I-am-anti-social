@@ -26,6 +26,23 @@
 {% block content %}
     <div class="col-sm-12">
         <div class="col-sm-4">
+            <h1>About Us?</h1>
+            <blockquote class="blockquote-reverse">
+                <h3 class="text-muted">Contact Us?</h3>
+                <h4>Phone:  +99 (55) 391-0862</h4>
+                <h4>Email:  noreply@anti-social.com</h4>
+            </blockquote>
+            <blockquote class="blockquote-reverse">
+                <h3 class="text-muted">Headquarters?</h3>
+                <h4>123 Penguin Way, Igloo 2</h4>
+                <h4>Isolation Industrial Park</h4>
+                <h4>Antartica</h4>
+            </blockquote>
+            <blockquote class="blockquote-reverse">
+                <h3 class="text-warning">Seriously! We are anti-social fill out a contact form and we might get back to you!</h3>
+            </blockquote>
+        </div>
+        <div class="col-sm-4">
             <h1>Contact</h1>
             <h4>Submit Your Contact Information</h4>
             <form role="form" action="" method="post">
@@ -33,30 +50,11 @@
                 {{ form | as_bootstrap }}
                 <button class="btn btn-large btn-success" type="submit">Submit</button>
             </form>
-
-        </div>
-        <div class="col-sm-4">
-            <h1>About Me?</h1>
-            <blockquote>
-                <h3 class="text-muted">Contact Us?</h3>
-                <h4>Phone:  +99 (55) 391-0862</h4>
-                <h4>Email:  noreply@anti-social.com</h4>
-            </blockquote>
-            <blockquote>
-                <h3 class="text-muted">Headquarters?</h3>
-                <h4>123 Penguin Way, Igloo 2</h4>
-                <h4>Isolation Industrial Park</h4>
-                <h4>Antartica</h4>
-            </blockquote>
-            <blockquote>
-                <h3 class="text-warning">Seriously! We are anti-social fill out a contact form and we might get back to you!</h3>
-            </blockquote>
-
-
         </div>
         <div class="col-sm-4">
             <h1>Map</h1>
             <h4 class="text-info">Remember we are Anti-Social, You didn't really think we would show <strong>YOU</strong> where we are!</h4>
-            <div id="map"></div></div>
+            <div id="map"></div>
+        </div>
     </div>
 {% endblock %}

@@ -25,41 +25,37 @@
             <h2>
                 <a href="/">My Anti-Social Site</a>
                 <button class="btn btn-warning pull-left" style="margin: 2px 10px 15px 0;" onclick="goBack()">
-                    <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>    Go Back</button>
+                    <i class="fa fa-history" aria-hidden="true"></i>    Go Back</button>
             </h2>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
             <ul class="nav navbar-nav pull-right">
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Buy! <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true"><i class="fa fa-shopping-basket" aria-hidden="true"></i> Buy <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="/products/">Products</a></li>
                         <li><a href="/magazines/">Magazines</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true">Rant! <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"><i class="fa fa-optin-monster" aria-hidden="true"></i> Rant <i class="fa fa-chevron-circle-down" aria-hidden="true"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="/blog/">Blog</a></li>
                         <li><a href="/forum/">Forum</a></li>
                     </ul>
                 </li>
-                <li><a href="/contact-form">Info!</a></li>
+                <li><a href="/contact-form"><i class="fa fa-info-circle" aria-hidden="true"></i> Info </a></li>
                 {% if user.is_superuser %}
-                    <li><a href="/admin/">Admin</a></li>
+                    <li><a href="/admin/"><i class="fa fa-wrench" aria-hidden="true"></i> Admin </a></li>
                 {% endif %}
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'profile' %}">Profile</a></li>
-                    <li><a href="{% url 'logout' %}">Log Out</a></li>
+                    <li><a href="{% url 'profile' %}"><i class="fa fa-user" aria-hidden="true"></i> Profile </a></li>
+                    <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out </a></li>
                 {% else %}
-                    <li><a href="{% url 'register' %}">Register</a></li>
-                    <li><a href="{% url 'login' %}">Log In</a></li>
+                    <li><a href="{% url 'register' %}"><i class="fa fa-user-plus" aria-hidden="true"></i> Register </a></li>
+                    <li><a href="{% url 'login' %}"><i class="fa fa-sign-out" aria-hidden="true"></i> Log In </a></li>
                 {% endif %}
-            </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-
-            </ul>
         </div>
     </div>
 </nav>
