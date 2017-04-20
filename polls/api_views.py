@@ -1,7 +1,8 @@
 from rest_framework import generics, status
 from rest_framework.response import Response
+from rest_framework.views import APIView
 from models import Poll, Vote, PollSubject
-from serializers import PollSerializer, VoteSerializer
+from .serializers import PollSerializer, VoteSerializer
 from threads.models import Thread
 
 
@@ -42,3 +43,24 @@ class VoteCreateView(generics.ListCreateAPIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED, headers=headers)
 
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+class PollViewSet(APIView):
+    """
+    TodoView used to handle the incoming requests relating to 
+    `todo` items
+    """
+
+    def get(self, request):
+        """
+        Retrieve a complete list of `todo` items from the Todo
+        model, serialize them to JSON and return the serialized 
+        todo items
+        """
+        poll_items = Poll.objects.all()
+        # Serialize the data retrieved from the DB and serialize
+        # them using the `TodoSerializer`
+        serializer = PollSerializer(poll_items, many=True)
+        # Store the serialized data `serialized_data`
+        serialized_data = serializer.data
+        return Response(serialized_data)

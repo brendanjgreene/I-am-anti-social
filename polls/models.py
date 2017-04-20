@@ -4,6 +4,7 @@ from threads.models import Thread
 
 
 class Poll(models.Model):
+
     question = models.TextField()
     thread = models.OneToOneField(Thread, null=True)
 
@@ -12,6 +13,7 @@ class Poll(models.Model):
 
 
 class PollSubject(models.Model):
+
     name = models.CharField(max_length=255)
     poll = models.ForeignKey(Poll, related_name='subjects')
 

@@ -3,7 +3,7 @@ django-emoticons==1.2
 arrow==0.10.0
 django-tinymce==2.6.0
 Pillow==4.0.0
-Django==1.10.6
+Django==1.8.9
 django-forms-bootstrap==3.0.1
 django-paypal==0.3.3
 packaging==16.8
