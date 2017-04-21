@@ -67,11 +67,11 @@ urlpatterns = [
     url(r'^thread/vote/(?P<thread_id>\d+)/(?P<subject_id>\d+)/$', forum_views.thread_vote, name='cast_vote'),
 
     # DJANGO REST FRAMEWORK
-    url(r'^threads/polls/$', polls_api_views.PollViewSet.as_view(), name='poll_view'),
-    url(r'^threads/polls/(?P<pk>[\d]+)$', polls_api_views.PollInstanceView.as_view(), name='poll_instance'),
-    url(r'^threads/polls/vote/(?P<thread_id>\d+)/$', polls_api_views.VoteCreateView.as_view(), name='create_vote'),
-    url(r'^post/update/(?P<pk>[\d+]+)/$', thread_api_views.PostUpdateView.as_view(), name="update_poll"),
-    url(r'post/delete/(?P<pk>[\d]+)/$', thread_api_views.PostDeleteView.as_view(), name='delete_poll')
+    # url(r'^threads/polls/$', polls_api_views.PollViewSet.as_view(), name='poll_view_set'),
+    # url(r'^threads/polls/(?P<pk>[\d]+)$', polls_api_views.PollInstanceView.as_view(), name='poll_instance_view'),
+    # url(r'^threads/polls/vote/(?P<thread_id>\d+)/$', polls_api_views.VoteCreateView.as_view(), name='vote_create_view'),
+    # url(r'^post/update/(?P<pk>[\d+]+)/$', thread_api_views.PostUpdateView.as_view(), name="post_update_view"),
+    #url(r'post/delete/(?P<pk>[\d]+)/$', thread_api_views.PostDeleteView.as_view(), name='post_delete_view')
 ]
 
 if settings.DEBUG:
