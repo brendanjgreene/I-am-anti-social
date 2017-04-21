@@ -46,7 +46,7 @@ def contact(request):
             email.send()
             messages.success(request, "Your Contact information has been submitted!"
                                       " Expect to hear from us within three working days!")
-            return redirect('/pages/contact/')
+            return redirect('/contact-form')
 
     return render(request, 'contactform.html', {
         'form': form_class,
